@@ -1,0 +1,10 @@
+{
+    "prettier.disableLanguages": [
+        "js"
+    ],
+    "editor.formatOnSave": true,
+    "eslint.autoFixOnSave": true,
+    "prettier.singleQuote": true,
+    "javascript.validate.enable": false,
+    "git.ignoreLimitWarning": true
+}
