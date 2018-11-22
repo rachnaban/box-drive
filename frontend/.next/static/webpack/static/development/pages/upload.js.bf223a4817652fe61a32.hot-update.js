@@ -260,9 +260,10 @@ function (_React$Component) {
         __self: this
       })), this.state.items.length > 0 && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Thumbnail__WEBPACK_IMPORTED_MODULE_3__["default"], {
         items: this.state.items,
+        onCancelUpload: this.cancelFile,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 136
+          lineNumber: 137
         },
         __self: this
       }));
@@ -296,4 +297,4 @@ function (_React$Component) {
 /***/ })
 
 })
-//# sourceMappingURL=upload.js.403d8bf33920478fd5ae.hot-update.js.map
+//# sourceMappingURL=upload.js.bf223a4817652fe61a32.hot-update.js.map

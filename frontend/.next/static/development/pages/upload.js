@@ -181,7 +181,8 @@ var ThumbnailItem = function ThumbnailItem(props) {
       flexDirection: 'column',
       alignItems: 'center',
       padding: '5px',
-      margin: '5px'
+      margin: '5px',
+      backgroundColor: '#3633FE'
     },
     __source: {
       fileName: _jsxFileName,
@@ -195,14 +196,14 @@ var ThumbnailItem = function ThumbnailItem(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 20
     },
     __self: this
   }, props.file.name), props.response && props.response.alt && props.response.src && props.response.downloadUrl ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: props.response.downloadUrl,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 26
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -210,10 +211,17 @@ var ThumbnailItem = function ThumbnailItem(props) {
     alt: props.response.alt,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 27
     },
     __self: this
-  }))) : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProgressBarWrapper__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }))) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    onClick: props.onCancelUpload,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31
+    },
+    __self: this
+  }, "X"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProgressBarWrapper__WEBPACK_IMPORTED_MODULE_1__["default"], {
     percentage: props.progress,
     style: {
       height: '5px',
@@ -225,7 +233,7 @@ var ThumbnailItem = function ThumbnailItem(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 33
     },
     __self: this
   }));
@@ -243,7 +251,7 @@ var Thumbnail = function Thumbnail(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 51
     },
     __self: this
   }, props.items.filter(function (item) {
@@ -254,9 +262,12 @@ var Thumbnail = function Thumbnail(props) {
       progress: item.progress,
       file: item.file,
       response: item.response,
+      onCancelUpload: function onCancelUpload() {
+        return props.onCancelUpload(item.index);
+      },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 61
+        lineNumber: 64
       },
       __self: this
     });
@@ -13574,9 +13585,10 @@ function (_React$Component) {
         __self: this
       })), this.state.items.length > 0 && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Thumbnail__WEBPACK_IMPORTED_MODULE_3__["default"], {
         items: this.state.items,
+        onCancelUpload: this.cancelFile,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 136
+          lineNumber: 137
         },
         __self: this
       }));
@@ -13609,7 +13621,7 @@ function (_React$Component) {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!*******************************!*\
   !*** multi ./pages/upload.js ***!
   \*******************************/
@@ -13634,5 +13646,5 @@ module.exports = dll_52339ab353c8e0db40da;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js"]]]));;
+},[[4,"static/runtime/webpack.js"]]]));;
 //# sourceMappingURL=upload.js.map
