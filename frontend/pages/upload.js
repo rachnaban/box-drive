@@ -4,8 +4,8 @@ import styled from 'styled-components';
 import Thumbnail from '../components/Thumbnail';
 
 class Upload extends React.Component {
-  uploadPreset = 'uploadPreset';
-  cloudName = 'cloudName';
+  uploadPreset = 'chingu';
+  cloudName = 'rachnaban';
   xhrs = [];
   state = {items: []};
 
